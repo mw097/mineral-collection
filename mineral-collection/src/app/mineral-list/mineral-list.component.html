@@ -1,0 +1,7 @@
+<mat-nav-list>
+    <mat-list-item *ngFor="let mineral of MINERALS" 
+                   [activated]="false">
+        <a matListItemTitle 
+           href="#">{{ mineral.name }}</a>
+    </mat-list-item>
+</mat-nav-list>
