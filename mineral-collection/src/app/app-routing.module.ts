@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: "list", loadChildren: () => import('./mineral-list/mineral-list.module').then(m => m.MineralListModule) },
+  { path: "minerals/list", loadChildren: () => import('./mineral-list/mineral-list.module').then(m => m.MineralListModule) },
+  { path: 'meteorites/list', loadChildren: () => import('./meteorite-list/meteorite-list.module').then(m => m.MeteoriteListModule)},
 ];
 
 @NgModule({

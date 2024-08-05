@@ -24,4 +24,6 @@ export interface SpecimenData {
     purchaseData: string[];
     type: SpecimenType;
     foundDate: string;
+    timeline?: string;
+    timelineLabel?: string;
 }
