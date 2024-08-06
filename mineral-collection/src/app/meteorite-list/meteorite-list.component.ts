@@ -12,6 +12,6 @@ export class MeteoriteListComponent implements OnInit{
   protected readonly dataSource = new MatTableDataSource(METEORITES);
 
   ngOnInit() {
-    this.displayedColumns = ['id', 'name', 'mass', 'found', 'country'];
+    this.displayedColumns = ['id', 'name', 'mass', 'found', 'country', 'description'];
   }
 }
