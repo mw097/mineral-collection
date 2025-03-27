@@ -3,9 +3,10 @@ import { MatTableDataSource } from "@angular/material/table"
 import { METEORITES } from '../constants/constants';
 
 @Component({
-  selector: 'app-meteorite-list',
-  templateUrl: './meteorite-list.component.html',
-  styleUrls: ['./meteorite-list.component.scss']
+    selector: 'app-meteorite-list',
+    templateUrl: './meteorite-list.component.html',
+    styleUrls: ['./meteorite-list.component.scss'],
+    standalone: false
 })
 export class MeteoriteListComponent implements OnInit{
   protected displayedColumns: string[] = [];

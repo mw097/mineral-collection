@@ -7,9 +7,10 @@ import { Subject, takeUntil } from 'rxjs';
 import { SpecimenData } from '../types/types';
 
 @Component({
-  selector: 'app-specimen-page',
-  templateUrl: './specimen-page.component.html',
-  styleUrls: ['./specimen-page.component.scss']
+    selector: 'app-specimen-page',
+    templateUrl: './specimen-page.component.html',
+    styleUrls: ['./specimen-page.component.scss'],
+    standalone: false
 })
 export class SpecimenPageComponent implements OnInit, OnDestroy {
   private readonly destroyed$ = new Subject<void>();
