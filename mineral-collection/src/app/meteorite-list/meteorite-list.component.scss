@@ -1,4 +1,13 @@
 .meteorite-list {
     height: calc(100% - 64px);
     overflow-y: auto;
+
+    .row-hover { 
+        cursor: pointer;
+        transition: background-color 0.3s filter 0.3s;
+
+        &:hover {
+            filter: brightness(85%);
+        }
+    }
 }

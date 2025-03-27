@@ -26,6 +26,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '1906',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=16873",
     },
     {
         id: 'ME-2',
@@ -37,6 +38,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '1914',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=16741",
     },
     {
         id: 'ME-3',
@@ -48,6 +50,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '2017',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=67553",
     },
     {
         id: 'ME-4',
@@ -59,6 +62,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '2000',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=31890",
     },
     {
         id: 'ME-5',
@@ -70,6 +74,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '1967',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/?code=23510",
     },
     {
         id: 'ME-6',
@@ -81,6 +86,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: 'before 1576',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=5247",
     },
     {
         id: 'ME-7',
@@ -92,6 +98,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '2011',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=54565",
     },
     {
         id: 'ME-8',
@@ -103,6 +110,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '2021',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=77187",
     },
     {
         id: 'ME-9',
@@ -114,6 +122,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '2022',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=78812",
     },
     {
         id: 'ME-10',
@@ -125,6 +134,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '11.03.2023',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=80139",
     },
     {
         id: 'ME-11',
@@ -136,6 +146,7 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '2020',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=75533",
     },
     {
         id: 'ME-12',
@@ -147,10 +158,11 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '2009',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=52031",
     },
     {
         id: 'ME-13',
-        name: ['Pułtusk'],
+        name: ['Pultusk'],
         locality: {country: 'Poland', city: '?'},
         mass: 7.02,
         description: 'Ordinary chondrite, H5',
@@ -158,31 +170,6 @@ export const METEORITES: SpecimenData[] = [
         type: SpecimenType.METEORITE,
         foundDate: '30.01.1868',
         timeline: '',
+        lpiUrl: "https://www.lpi.usra.edu/meteor/metbull.php?code=18901",
     },
 ];
-
-export const STATIC_TIMELINE_DATA = [
-    {
-        year: '13,82 bln years ago',
-        text: 'The age of the Universe',
-        numberOfLines: 3
-    },
-    {
-        year: '4,6 bln years ago',
-        text: 'The age of the Solar system',
-        numberOfLines: 3
-    },
-];
-
-/** 
- * Meteorite timeline constants.
- */
-
-/** The gap between screen edge and timeline. */
-export const SIDE_MARGIN = 100;
-
-/** The height of tick line. */
-export const TICK_HEIGHT = 50;
-
-/** The size of font in px. */
-export const FONT_SIZE = 24;

@@ -26,4 +26,5 @@ export interface SpecimenData {
     foundDate: string;
     timeline?: string;
     timelineLabel?: string;
+    lpiUrl? : string;
 }
