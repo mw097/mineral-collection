@@ -1,8 +1,11 @@
 .main-toolbar {
+  justify-content: baseline;
   position: sticky;
   top: 0;
 
-  .example-spacer {
-    flex: 1 1 auto;
+  .main-toolbar-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
   }
 }

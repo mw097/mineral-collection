@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { MINERALS } from '../constants/constants';
+import { Component, inject } from '@angular/core';
+import { MineralService } from '../services/mineral.service';
+import {toSignal} from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-mineral-list',
@@ -8,5 +9,8 @@ import { MINERALS } from '../constants/constants';
     standalone: false
 })
 export class MineralListComponent {
-  readonly MINERALS = MINERALS;
+  private readonly mineralService = inject(MineralService);
+  protected readonly minerals = toSignal(
+    this.mineralService.getMinerals(), {initialValue: []}
+  );
 }

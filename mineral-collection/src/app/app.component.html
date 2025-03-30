@@ -1,19 +1,36 @@
 <mat-toolbar class="main-toolbar">
-  <span>Mineral collection</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
-    <mat-icon>more_vert</mat-icon>
-</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item
-          [routerLink]="['/minerals']">
-    <span>Minerals</span>
-  </button>
-  <button mat-menu-item
-          [routerLink]="['/meteorites']">
-    <span>Meteorites</span>
-  </button>
-</mat-menu>
+  <div class="main-toolbar-content">
+    <h5>Mineral collection</h5>
+    <nav class="main-nav">
+      <a mat-button
+        routerLink="/minerals"
+        routerLinkActive="active">
+        Minerals
+      </a>
+      <a mat-button
+        routerLink="/meteorites"
+        routerLinkActive="active">
+        Meteorites
+      </a>
+    </nav>
+  </div>
+  <div class="main-toolbar-menu">
+    <button mat-icon-button 
+            aria-label="Menu"
+            [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item
+              [routerLink]="['/minerals']">
+        <span>Minerals</span>
+      </button>
+      <button mat-menu-item
+              [routerLink]="['/meteorites']">
+        <span>Meteorites</span>
+      </button>
+    </mat-menu>
+</div>
 </mat-toolbar>
 <!-- Main router -->
 <router-outlet class="main-router"></router-outlet>

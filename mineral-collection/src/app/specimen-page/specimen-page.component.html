@@ -7,17 +7,17 @@
   </nav>
   <mat-card class="specimen-card" appearance="outlined">
     <mat-card-header>
-      <mat-card-title>{{ specimen?.name }}</mat-card-title>
+      <mat-card-title>{{ specimen()?.name }}</mat-card-title>
       <!-- <mat-card-subtitle>specimen.classification</mat-card-subtitle> -->
     </mat-card-header>
     <!-- <img mat-card-image ngSrc="" alt=""> -->
     <mat-card-content>
       <p>
-        {{specimen?.description}}
+        {{specimen()?.description}}
       </p>
       <a mat-button 
          target="_blank"
-         [href]="specimen?.lpiUrl">
+         [href]="">
         Go to The Meteoritical Society page
       </a>
     </mat-card-content>

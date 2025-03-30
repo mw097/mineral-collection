@@ -1,10 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import {Location} from "@angular/common";
+import { Component, OnInit, DestroyRef, inject, signal } from '@angular/core';
+import { Location } from "@angular/common";
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { MeteoriteService } from '../services/meteorite.service';
-import { Subject, takeUntil } from 'rxjs';
-import { SpecimenData } from '../types/types';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MeteoriteData } from '../constants/types';
 
 @Component({
     selector: 'app-specimen-page',
@@ -12,18 +12,14 @@ import { SpecimenData } from '../types/types';
     styleUrls: ['./specimen-page.component.scss'],
     standalone: false
 })
-export class SpecimenPageComponent implements OnInit, OnDestroy {
-  private readonly destroyed$ = new Subject<void>();
+export class SpecimenPageComponent implements OnInit {
+  private readonly route = inject(ActivatedRoute);
+  private readonly snackBar = inject(MatSnackBar);
+  private readonly meteoriteService = inject(MeteoriteService);
+  private readonly location = inject(Location);
+  private readonly destroyRef = inject(DestroyRef);
   private specimenId?: string;
-  
-  specimen?: SpecimenData;
-
-  constructor(
-    private route: ActivatedRoute,
-    private snackBar: MatSnackBar,
-    private meteoriteService: MeteoriteService,
-    private location: Location,
-  ) {}
+  protected specimen = signal<MeteoriteData|null>(null);
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -36,11 +32,11 @@ export class SpecimenPageComponent implements OnInit, OnDestroy {
     if (this.specimenId !== '') {
       this.meteoriteService.getMeteorite(specimenId)
         .pipe(
-          takeUntil(this.destroyed$)
+          takeUntilDestroyed(this.destroyRef)
         )
-        .subscribe((meteorite: SpecimenData|null) => {
+        .subscribe((meteorite: MeteoriteData|null) => {
           if (meteorite) {
-            this.specimen = meteorite;
+            this.specimen.set(meteorite);
           } else {
             this.openSnackBar('Specimen not found.');
           }
@@ -56,10 +52,5 @@ export class SpecimenPageComponent implements OnInit, OnDestroy {
 
   goToPreviousPage() {
     this.location.back();
-  }
-
-  ngOnDestroy() {
-    this.destroyed$.next();
-    this.destroyed$.complete();
   }
 }

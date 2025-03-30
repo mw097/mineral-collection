@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatTableDataSource } from "@angular/material/table"
-import { METEORITES } from '../constants/constants';
+import { MeteoriteService } from '../services/meteorite.service';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-meteorite-list',
@@ -9,8 +10,12 @@ import { METEORITES } from '../constants/constants';
     standalone: false
 })
 export class MeteoriteListComponent implements OnInit{
+  private readonly meteoriteService = inject(MeteoriteService);
+  protected readonly meteorites = toSignal(
+    this.meteoriteService.getMeteorites(), {initialValue: []}
+  );
   protected displayedColumns: string[] = [];
-  protected readonly dataSource = new MatTableDataSource(METEORITES);
+  protected readonly dataSource = new MatTableDataSource(this.meteorites());
 
   ngOnInit() {
     this.displayedColumns = ['id', 'name', 'mass', 'found', 'country', 'description'];

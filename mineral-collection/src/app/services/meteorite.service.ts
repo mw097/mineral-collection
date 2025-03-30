@@ -1,22 +1,36 @@
-//import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { METEORITES } from '../constants/constants';
-import { Observable, of } from 'rxjs';
-import { SpecimenData } from '../types/types';
+import { Injectable, inject } from '@angular/core';
+import { Observable, map } from 'rxjs';
+import { collection, collectionData, Firestore } from '@angular/fire/firestore';
+import { MeteoriteData } from '../constants/types';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MeteoriteService {
+  private readonly firestore = inject(Firestore);
+  private readonly meteorites$ = new Observable<MeteoriteData[]>();
 
-  constructor(/*private http: HttpClient*/) { }
+  constructor() {
+    const meteoritesCollection = collection(this.firestore, 'meteorites');
+    this.meteorites$ = collectionData(meteoritesCollection, { idField: 'id' }) as Observable<MeteoriteData[]>;
+  }
 
-  //TODO(mw097): Add the API calls.
-  //getMeteoriteList() {}
+  /**
+   * Get the meteorites from the Firestore collection.
+   * @returns Observable of meteorites.
+   */
+  getMeteorites(): Observable<MeteoriteData[]> {
+    return this.meteorites$;
+  }
 
-  getMeteorite(specimenId: string): Observable<SpecimenData|null> {
-    //TODO(mw097): Add the API calls.
-    const meteorite = METEORITES.find(meteorite => meteorite.id === specimenId);
-    return of(meteorite || null);
+  /**
+   * Returns a meteorite by its id.
+   * @param id The id of the meteorite to get.
+   * @returns 
+   */
+  getMeteorite(id: string): Observable<MeteoriteData | null> {
+    return this.meteorites$.pipe(
+      map(meteorites => meteorites.find(meteorite => meteorite.id === id) || null)
+    );
   }
 }
