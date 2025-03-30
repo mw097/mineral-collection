@@ -1,11 +1,5 @@
 .main-toolbar {
-  justify-content: baseline;
+  justify-content: space-between;
   position: sticky;
   top: 0;
-
-  .main-toolbar-content {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
 }
