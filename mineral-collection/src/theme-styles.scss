@@ -1,4 +1,6 @@
 @use '@angular/material' as mat;
+@use 'app/constants/constants' as *;
+
 // Define a custom theme
 $theme: mat.define-theme((
   color: (
@@ -15,3 +17,14 @@ $theme: mat.define-theme((
     scale: 0,
   )
 ));
+
+:root {
+  /* MatButton override */
+  @include mat.button-overrides((
+    text-label-text-size: $font-5,
+  ));
+  /* MatCard override */
+  @include mat.toolbar-overrides((
+    title-text-size: $font-10,
+  ));
+}

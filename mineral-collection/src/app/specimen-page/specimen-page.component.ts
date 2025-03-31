@@ -5,12 +5,21 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { MeteoriteService } from '../services/meteorite.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MeteoriteData } from '../constants/types';
+import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
     selector: 'app-specimen-page',
     templateUrl: './specimen-page.component.html',
     styleUrls: ['./specimen-page.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [
+      MatCardContent, 
+      MatCard, 
+      MatCardHeader, 
+      MatIcon,
+      MatCardTitle
+    ],
 })
 export class SpecimenPageComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
