@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'minerals', loadChildren: () => import('./mineral-list/mineral-list.module').then(m => m.MineralListModule) },
   { path: 'meteorites', loadChildren: () => import('./meteorite-list/meteorite-list.module').then(m => m.MeteoriteListModule) },
   { path: 'about', loadComponent: () => import('./about/about.component').then(m => m.AboutComponent)},
+  { path: 'wall', loadComponent: () => import('./wall/wall.component').then(m => m.WallComponent)},
 ];
 
 @NgModule({

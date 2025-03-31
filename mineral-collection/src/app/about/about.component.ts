@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 import { MatCard, MatCardContent, MatCardFooter, MatCardHeader, MatCardTitle } from '@angular/material/card';
 
@@ -8,6 +8,7 @@ import { MatCard, MatCardContent, MatCardFooter, MatCardHeader, MatCardTitle } f
   styleUrl: './about.component.scss',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
   imports: [MatCard, MatCardHeader, MatCardContent, MatCardTitle],
 })
 export class AboutComponent {

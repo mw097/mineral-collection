@@ -1,3 +1,17 @@
 @use '@angular/material' as mat;
-
-@include mat.core();
+// Define a custom theme
+$theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+  ),
+  typography: (
+    brand-family: 'Playfair Display, serif',
+    plain-family: 'EB Garamond, serif',
+    bold-weight: 900,
+    medium-weight: 600,
+    regular-weight: 300,
+  ),
+  density: (
+    scale: 0,
+  )
+));
