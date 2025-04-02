@@ -1,20 +1,20 @@
 @use '@angular/material' as mat;
 @use 'app/constants/constants' as *;
 
-// Define a custom theme
+/* App main theme (Dark mode). */
 $theme: mat.define-theme((
   color: (
     theme-type: dark,
   ),
   typography: (
-    brand-family: 'Playfair Display, serif',
-    plain-family: 'EB Garamond, serif',
+    brand-family: $font-brand-family,
+    plain-family: $font-plain-family,
     bold-weight: 900,
     medium-weight: 600,
     regular-weight: 300,
   ),
   density: (
-    scale: 0,
+    scale: -4,
   )
 ));
 

@@ -1,5 +1,26 @@
+@use 'constants/constants.scss' as *;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .main-toolbar {
   justify-content: space-between;
   position: sticky;
   top: 0;
+
+  .main-title {
+    .main-title-link {
+      color: $color-font-white;
+      text-decoration: none;
+    }
+  }
+}
+
+.main-outlet {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }

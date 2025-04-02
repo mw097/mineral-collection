@@ -18,9 +18,12 @@ $font-8: 32px;
 $font-9: 36px;
 $font-10: 40px;
 
+/* Font families */
+$font-brand-family: 'Playfair Display', serif;
+$font-plain-family: 'EB Garamond', serif;
+
 /* Colors */
 $color-app-background: #303030;
 $color-background: #3b3b3b;
-$color-border: #555;
-
-/* Mixin */
+$color-border: #aaaaaa;
+$color-font-white: #e6e1e6;

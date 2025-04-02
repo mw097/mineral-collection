@@ -1,0 +1,37 @@
+@use '../constants/constants.scss' as *;
+@use '@angular/material' as mat;
+
+.page-footer {
+  background-color: $color-app-background;
+  border-top: 2px solid $color-border;
+  color: $color-font-white;
+  font-size: $font-4;
+	padding: $space-3;
+  text-align: center;
+	
+	.footer-nav {
+	  margin-top: $space-2;
+
+	  .link {
+      color: $color-font-white;
+      font-weight: 900;
+      margin: 0 $space-2;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+	  }
+	}
+  
+	.socials {
+	  margin-top: $space-2;
+
+    .social-link {
+      color: $color-font-white;
+      display: inline-block;
+      margin: 0 5px;
+	  }
+	}
+}
+  

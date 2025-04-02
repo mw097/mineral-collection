@@ -1,34 +1,19 @@
 @use 'theme-styles' as *;
-@use '@angular/material' as mat;
 @use 'app/constants/constants' as *;
-
-/* Angular Material Theme */
-@include mat.elevation-classes();
-@include mat.app-background();
+@use '@angular/material' as mat;
 
 html {
-	/* Apply the theme to all components */
+	// Custom Theming for Angular Material
+  @include mat.theme($theme);
 	@include mat.all-component-themes($theme);
-	/* Apply the custom Material theme */
-	@include mat.elevation-classes();
-	@include mat.app-background();
 }
-
-html, body {
-	font-family: 'EB Garamond', serif;
-	height: 100vh;
+html, body { 
+	height: 100%;
 	overflow-y: hidden;
 }
 
 body { 
 	margin: 0;
-
-	&.mat-app-background {
-		background-color: $color-app-background;
-		background-image: url('./assets/textures/fabric.png');
-	}
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Playfair Display", serif;
+	background-color: $color-app-background;
+	background-image: url('./assets/textures/fabric.png');
 }
