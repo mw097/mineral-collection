@@ -3,7 +3,6 @@ import { MineralService } from '../services/mineral.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import { MineralData } from '../constants/types';
-import { MatCardModule } from '@angular/material/card';
 import { MineralLabelComponent } from '../shared/mineral-label/mineral-label.component';
 
 @Component({
@@ -13,7 +12,6 @@ import { MineralLabelComponent } from '../shared/mineral-label/mineral-label.com
     standalone: true,
     imports: [
       CommonModule, 
-      MatCardModule,
       MineralLabelComponent,
     ],
 })
