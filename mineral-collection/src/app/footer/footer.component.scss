@@ -8,6 +8,13 @@
   font-size: $font-4;
 	padding: $space-3;
   text-align: center;
+
+  .footer-decoration {
+   .decoration {
+    color: $color-border;
+    width: 100%;
+   }
+  }
 	
 	.footer-nav {
 	  margin-top: $space-2;

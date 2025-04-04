@@ -1,0 +1,35 @@
+<div class="mineral-label">
+  <img alt="Decoration"
+       class="decoration"
+       src="assets/images/top-decoration.svg">
+  <div class="label-outter-border">
+    <div class="label-inner-border">
+      <div class="photo-wrapper">
+        <img alt="Mineral Photo"
+             class="photo"
+             src="assets/images/logo.webp">
+      </div>
+      <div class="label-content">
+        <div class="label-id">
+          <p>NO. {{ mineralData().id }}</p>
+        </div>
+        <div class="divider"></div>
+        <div class="label-name">
+          <p>{{ mineralData().name }}</p>
+        </div>
+        <div class="divider"></div>
+        <div class="label-locality">
+          <p>
+            {{ mineralData().locality }}, 
+            <span class="country">
+              {{ mineralData().country }}
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img alt="Decoration"
+       class="decoration-bottom"
+       src="assets/images/top-decoration.svg">
+</div>

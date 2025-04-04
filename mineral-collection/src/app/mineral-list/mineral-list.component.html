@@ -1,10 +1,9 @@
-<mat-nav-list>
-  @for (mineral of minerals(); track mineral.id) {
-    <mat-list-item [activated]="false">
-      <a matListItemTitle 
-         href="#">
-        {{ mineral.name }}
-      </a>
-    </mat-list-item>
-  }
-</mat-nav-list>
+<div class="mineral-list">
+  <div class="mineral-scroll">
+    @for (mineral of minerals(); track mineral.id) {
+      <app-mineral-label [mineralData]="mineral">
+      </app-mineral-label>
+    }
+  </div>
+</div>
+ 
