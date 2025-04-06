@@ -2,10 +2,13 @@
 @use '@angular/material' as mat;
 
 .page-footer {
+  align-items: center;
   background-color: $color-app-background;
   border-top: 2px solid $color-border;
   color: $color-font-white;
+  display: flex;
   font-size: $font-4;
+  justify-content: space-between;
 	padding: $space-3;
   text-align: center;
 
@@ -17,8 +20,6 @@
   }
 	
 	.footer-nav {
-	  margin-top: $space-2;
-
 	  .link {
       color: $color-font-white;
       font-weight: 900;
@@ -32,12 +33,19 @@
 	}
   
 	.socials {
-	  margin-top: $space-2;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .copyright {
+      font-weight: 900;
+    }
 
     .social-link {
       color: $color-font-white;
-      display: inline-block;
-      margin: 0 5px;
+      font-weight: 900;
+      margin: $space-4;
+      text-decoration: none;
 	  }
 	}
 }
