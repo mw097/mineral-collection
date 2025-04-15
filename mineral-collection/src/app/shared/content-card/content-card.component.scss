@@ -1,0 +1,24 @@
+@use '../../constants/constants.scss' as *;
+
+.content-card {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	.decoration {
+		height: 62px;
+	}
+
+	.decoration-bottom {
+		height: 62px;
+		transform: rotate(180deg);
+	}
+
+  .label-outer-border {
+		@include border-outer;
+
+		.label-inner-border {
+			@include border-inner;
+		}
+	}
+}

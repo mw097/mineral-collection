@@ -36,3 +36,28 @@ $color-card-background: #3030307b;
 $color-background: #3b3b3b;
 $color-border: #aaaaaa;
 $color-font-white: #e6e1e6;
+
+/* Mixins */
+@mixin border-inner {
+	border: 2px solid $color-border;
+	border-radius: $border-radius-6;
+	padding: $space-6;
+}
+
+@mixin border-outer {
+	background-color: $color-card-background;
+	border: 2px solid $color-border;
+	border-radius: calc($border-radius-6 + 3px);
+	padding: 3px;
+}
+
+@mixin link-with-transition {
+	color: $color-font-white;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		color: $color-border;
+		text-decoration: underline;
+	}
+}

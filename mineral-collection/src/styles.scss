@@ -5,7 +5,7 @@
 html {
 	// Custom Theming for Angular Material
   @include mat.theme($theme);
-	@include mat.all-component-themes($theme);
+  @include mat.all-component-themes($theme);
 }
 html, body { 
 	height: 100%;

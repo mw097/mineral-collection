@@ -1,5 +1,33 @@
 @use '../constants/constants' as *;
 
 .about-card {
-    margin: $space-4;
+	color: $color-font-white;
+	margin: $space-5;
+
+	.card-title {
+		margin: 0;
+	}
+
+	.card-content {
+		.sub-header {
+			margin: 0;
+		}
+
+		.about-intro {
+			padding-bottom: $space-4;
+		}
+
+		.author-info {
+			margin-bottom: 0;
+
+			.social-link {
+				@include link-with-transition;
+			}
+		}
+	}
+
+	.divider, 
+	.underline {
+		border: 1px solid $color-border;
+	}
 }

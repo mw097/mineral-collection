@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
+import { ContentCardComponent } from "../shared/content-card/content-card.component";
 
 @Component({
   selector: 'app-about',
@@ -7,7 +7,7 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './about.component.scss',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatCardModule],
+  imports: [ContentCardComponent],
 })
 export class AboutComponent {
   
