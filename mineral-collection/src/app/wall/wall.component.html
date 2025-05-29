@@ -1,15 +1,24 @@
 <div class="wall-page">
-	<mat-sidenav-container autosize
-						  class="wall-sidenav-container">
-		<mat-sidenav opened 
-					class="wall-sidenav" 
-					mode="side">
-		</mat-sidenav>
-		<mat-sidenav-content>
-			<h2>Wall</h2>
-		</mat-sidenav-content>
-	</mat-sidenav-container>
-	<mat-card>
-
-	</mat-card>
+  <mat-sidenav-container
+    autosize
+    class="wall-sidenav-container"
+  >
+    <mat-sidenav
+      opened
+      class="wall-sidenav"
+      mode="side"
+      position="end"
+    >
+      <h2>Select content</h2>
+    </mat-sidenav>
+    <mat-sidenav-content class="wall-sidenav-content">
+      <app-content-card>
+        <div class="card-header">
+          <h2>Quartz</h2>
+        </div>
+        <div class="card-content">content</div>
+        <div class="card-footer">Footer</div>
+      </app-content-card>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
