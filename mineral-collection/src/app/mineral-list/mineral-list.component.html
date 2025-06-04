@@ -1,9 +1,37 @@
 <div class="mineral-list">
+  <div class="mineral-content">
+    <h5 class="title">What is a mineral?</h5>
+    <div class="description">
+      <p>
+        A mineral is a naturally occurring, inorganic solid with a definite
+        chemical composition and a crystalline structure. Minerals are the
+        building blocks of rocks and are essential to many geological processes.
+      </p>
+      <p>
+        Minerals can be classified based on their chemical composition, crystal
+        structure, and physical properties. They are typically formed through
+        geological processes such as crystallization from molten rock,
+        precipitation from solution, or alteration of existing minerals.
+      </p>
+      <p>
+        Minerals are important for various applications, including construction,
+        electronics, and medicine. They are also valuable for scientific
+        research, as they provide insights into the Earth's history and
+        processes.
+      </p>
+      <p>
+        In this collection, you will find a variety of minerals, each with
+        unique properties and characteristics. Explore the list to learn more
+        about these fascinating natural substances.
+      </p>
+    </div>
+    <div class="spacer-wrapper">
+      <div class="spacer"></div>
+    </div>
+  </div>
   <div class="mineral-scroll">
     @for (mineral of minerals(); track mineral.id) {
-      <app-mineral-label [mineralData]="mineral">
-      </app-mineral-label>
+      <app-mineral-label [mineralData]="mineral"> </app-mineral-label>
     }
   </div>
 </div>
- 

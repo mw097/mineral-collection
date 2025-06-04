@@ -8,6 +8,35 @@
 	height: 100%;
 	overflow: auto;
 
+	.mineral-content {
+		color: $color-font-white;
+
+		.title {
+			font-family: $font-brand-family;
+			font-size: $font-10;
+			font-weight: 700;
+			margin: $space-9;
+			text-align: center;
+		}
+
+		.description {
+			font-family: $font-plain-family;
+			font-size: $font-5;
+			font-weight: 300;
+			text-align: center;
+			padding: 0 $space-6 $space-6;
+		}
+
+		.spacer-wrapper {
+			.spacer {
+				border-bottom: 2px solid $color-border;
+				border-top: 2px solid $color-border;
+				height: $space-2;
+				margin: 0 $space-6 $space-5;
+			}
+		}
+	}
+
 	.mineral-scroll {
 		display: grid;
 		gap: $space-4;
