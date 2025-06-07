@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "kunstkamera",
     "public": "dist/mineral-collection/browser",
     "ignore": [
       "firebase.json",

@@ -1,25 +1,25 @@
-import { Routes } from '@angular/router'
+import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
     path: 'meteorite/:specimenId',
     loadComponent: () =>
       import('./specimen-page/specimen-page.component').then(
-        (m) => m.SpecimenPageComponent,
+        (m) => m.SpecimenPageComponent
       ),
   },
   {
     path: 'minerals',
     loadComponent: () =>
       import('./mineral-list/mineral-list.component').then(
-        (m) => m.MineralListComponent,
+        (m) => m.MineralListComponent
       ),
   },
   {
     path: 'meteorites',
     loadComponent: () =>
       import('./meteorite-list/meteorite-list.component').then(
-        (m) => m.MeteoriteListComponent,
+        (m) => m.MeteoriteListComponent
       ),
   },
   {
@@ -32,6 +32,8 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./wall/wall.component').then((m) => m.WallComponent),
   },
-  { path: '', redirectTo: '/wall', pathMatch: 'full' },
-  { path: '**', redirectTo: '/wall' },
-]
+  // Redirect the root (empty) path to the mineral list.
+  { path: '', redirectTo: '/minerals', pathMatch: 'full' },
+  // Redirect any unknown paths to the mineral list.
+  { path: '**', redirectTo: '/minerals' },
+];
