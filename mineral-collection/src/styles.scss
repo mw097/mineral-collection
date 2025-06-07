@@ -7,12 +7,13 @@ html {
   @include mat.theme($theme);
   @include mat.all-component-themes($theme);
 }
-html, body { 
+
+html, body {
 	height: 100%;
 	overflow-y: hidden;
 }
 
-body { 
+body {
 	margin: 0;
 	background-color: $color-app-background;
 	background-image: url('./assets/textures/fabric.png');

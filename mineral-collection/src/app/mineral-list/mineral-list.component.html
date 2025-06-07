@@ -1,5 +1,5 @@
 <div class="mineral-list">
-  <div class="mineral-content">
+  <section class="mineral-content">
     <h5 class="title">What is a mineral?</h5>
     <div class="description">
       <p>
@@ -28,10 +28,10 @@
     <div class="spacer-wrapper">
       <div class="spacer"></div>
     </div>
-  </div>
-  <div class="mineral-scroll">
+  </section>
+  <section class="mineral-scroll">
     @for (mineral of minerals(); track mineral.id) {
       <app-mineral-label [mineralData]="mineral"> </app-mineral-label>
     }
-  </div>
+  </section>
 </div>

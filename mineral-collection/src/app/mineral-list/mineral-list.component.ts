@@ -4,7 +4,8 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import { MineralData } from '../constants/types';
 import { MineralLabelComponent } from '../shared/mineral-label/mineral-label.component';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-mineral-list',

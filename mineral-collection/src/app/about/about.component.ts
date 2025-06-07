@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ContentCardComponent } from "../shared/content-card/content-card.component";
+import { DecorationComponent } from '../shared/decoration/decoration.component';
 
 @Component({
   selector: 'app-about',
@@ -7,8 +7,6 @@ import { ContentCardComponent } from "../shared/content-card/content-card.compon
   styleUrl: './about.component.scss',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ContentCardComponent],
+  imports: [DecorationComponent],
 })
-export class AboutComponent {
-  
-}
+export class AboutComponent {}

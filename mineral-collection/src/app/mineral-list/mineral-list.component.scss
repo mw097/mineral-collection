@@ -7,9 +7,11 @@
 .mineral-list {
 	height: 100%;
 	overflow: auto;
+	scroll-snap-type: y mandatory;
 
 	.mineral-content {
 		color: $color-font-white;
+		scroll-snap-align: end;
 
 		.title {
 			font-family: $font-brand-family;
@@ -43,10 +45,10 @@
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		overflow: hidden;
 		padding: $space-5;
+		scroll-snap-align: start;
 
-		.mineral-card {
-			border: 2px solid $color-border;
-			background-color: $color-app-background;
+		app-mineral-label {
+			scroll-snap-align: align;
 		}
 	}
 }
