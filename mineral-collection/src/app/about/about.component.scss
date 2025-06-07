@@ -1,8 +1,14 @@
 @use '../constants/constants' as *;
 
+:host {
+	height: 100%;
+}
+
 .about-card {
 	color: $color-font-white;
-	margin: $space-5;
+	height: 100%;
+	padding: $space-5;
+	overflow: auto;
 
 	.about-content {
 		color: $color-font-white;
@@ -11,7 +17,7 @@
 			font-family: $font-brand-family;
 			font-size: $font-9;
 			font-weight: 700;
-			margin: $space-9;
+			margin: 0 $space-9 $space-9;
 			text-align: center;
 		}
 

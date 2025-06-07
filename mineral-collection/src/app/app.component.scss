@@ -18,6 +18,19 @@
       text-decoration: none;
     }
   }
+
+  .main-menu-button {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .main-nav {
+      display: none;
+    }
+    .main-menu-button {
+      display: inline-flex;
+    }
+  }
 }
 
 .main-outlet {

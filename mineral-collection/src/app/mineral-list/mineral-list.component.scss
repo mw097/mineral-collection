@@ -39,16 +39,12 @@
 		}
 	}
 
-	.mineral-scroll {
+	.minerals {
 		display: grid;
 		gap: $space-4;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		overflow: hidden;
 		padding: $space-5;
 		scroll-snap-align: start;
-
-		app-mineral-label {
-			scroll-snap-align: align;
-		}
 	}
 }

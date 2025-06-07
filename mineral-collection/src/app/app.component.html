@@ -37,6 +37,29 @@
       About
     </a>
   </nav>
+  <button
+    mat-icon-button
+    class="main-menu-button"
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button
+      mat-menu-item
+      routerLink="/minerals"
+      routerLinkActive="active"
+    >
+      Minerals
+    </button>
+    <button
+      mat-menu-item
+      routerLink="/about"
+      routerLinkActive="active"
+    >
+      About
+    </button>
+  </mat-menu>
 </mat-toolbar>
 <div class="main-outlet">
   <router-outlet></router-outlet>
